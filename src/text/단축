@@ -1,0 +1,19 @@
+시프트 f6 = 변수명 전부 변환
+컨트롤 x  = 라인제거
+f2 * 제일중요 *
+alt + enter = 오류 수정 (그냥 다고쳐줌)
+ctrl e = 이전 파일로 가는거
+ctrl + shift etner enter
+컨트롤 방향키 넘기기
+psvm = main 함수 만들기
+한줄 주석 = ctrl + /
+여러줄 한번에 묶어서 주석 = ctrl + shi\ft + /
+코드줄에서 ctrl + tab 해서 src로 이동후 ctrl + alt + insert
+필요없는 임포트 제거 = ctrl + alt + o
+alt + 4 = 터미널 단축키
+iter + enter = for문 자동완성
+sout = System.out.println의 단축키
+fori = for 문의 기본 베이스 단축키
+getter and setter = alt + insert
+no usages 없애는법 = file -> settings -> editor -> inlay hints -> usages 체크 해제
+변수 추출 리팩토링 작업 = ctrl + alt + v
