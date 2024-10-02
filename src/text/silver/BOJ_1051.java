@@ -23,13 +23,14 @@ public class BOJ_1051 {
 
         // 직사각형 값 입력
         for (int i = 0; i < N; i++) {
-            String line = br.readLine();
+            String[] line = br.readLine().split("");  // 문자열을 각 문자별로 나눔
+            /*System.out.println(Arrays.toString(line));*/
             for (int j = 0; j < M; j++) {
-                arr[i][j] = Character.getNumericValue(line.charAt(j));
+                arr[i][j] = Integer.parseInt(line[j]);  // 문자를 숫자로 변환하여 배열에 저장
             }
         }
 
-        int maxSize = Math.min(N, M); // 가능한 최대 정사각형 크기
+        int maxSize = Math.min(N, M); // 어차피 정사각형의 가장큰 크기는 작은 수의 크기임
 
         // 정사각형 크기를 줄여가며 탐색
         for (int size = maxSize; size > 1; size--) {
