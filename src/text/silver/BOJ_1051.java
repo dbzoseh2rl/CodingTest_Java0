@@ -1,7 +1,6 @@
 package text.silver;
 
 import java.io.*;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /*
@@ -30,7 +29,7 @@ public class BOJ_1051 {
             }
         }
 
-        int maxSize = Math.min(N, M); // 어차피 정사각형의 가장큰 크기는 작은 수의 크기임
+        int maxSize = Math.min(N, M);  // 최대 정사각형 크기 - 정사각이므로 작은 길이보다 클수없음
 
         // 정사각형 크기를 줄여가며 탐색
         for (int size = maxSize; size > 1; size--) {
