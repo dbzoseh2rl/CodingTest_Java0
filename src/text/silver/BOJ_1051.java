@@ -3,13 +3,6 @@ package text.silver;
 import java.io.*;
 import java.util.StringTokenizer;
 
-/*
-3 5
-42101
-22100
-22101
-*/
-
 public class BOJ_1051 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -58,3 +51,10 @@ public class BOJ_1051 {
         br.close();
     }
 }
+
+/*
+3 5
+42101
+22100
+22101
+*/
