@@ -1,7 +1,26 @@
 package text.silver;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
 public class BOJ_3135 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int A = Integer.parseInt(st.nextToken());
+        int B = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(br.readLine());
+        int p = 0;
+        int min = Math.abs(A - B);
+        for (int i = 0; i < N; i++) {
+            int k = Integer.parseInt(br.readLine());
+            min = Math.min(Math.abs(B - k) + 1, min);
+        }
+        System.out.println(min + p);
 
     }
 }
