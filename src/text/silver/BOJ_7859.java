@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class BOJ_7859 {
+    static int N;
+    static int maxTraffic = 0;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int TC = Integer.parseInt(br.readLine());
@@ -17,6 +20,7 @@ public class BOJ_7859 {
                 map[i][j] = Integer.parseInt(st.nextToken());
             }
         }
+        // 여기까진 맞는데...
 
         int result = 0;
 
@@ -29,5 +33,19 @@ public class BOJ_7859 {
         }
 
         System.out.println(result);
+    }
+    static void dfs(int idx, boolean[] selected) {
+        if (idx == N) { // 노드 분할
+            maxTraffic = Math.max(maxTraffic, );
+            return;
+        }
+
+        // 노드가 A로 나뉠떄
+        selected[idx] = true;
+        dfs(idx + 1, selected);
+
+        // 노드가 B로 나뉠때
+        selected[idx] = false;
+        dfs(idx + 1, selected);
     }
 }
