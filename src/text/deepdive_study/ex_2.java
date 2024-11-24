@@ -1,4 +1,4 @@
-package text.deepdive;
+package text.deepdive_study;
 
 import java.io.*;
 import java.util.Arrays;
