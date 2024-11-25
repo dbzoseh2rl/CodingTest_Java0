@@ -7,10 +7,10 @@ import java.util.Scanner;
 
 public class blog_example {
     public static void main(String[] args) {
-        String str = "Lee Do kyung ";
-        System.out.println(str.substring(2, 4)); // "e"
-        System.out.println(str.substring(2, str.length())); // "e Do Kyung"
-
+        String str = "Lee. Do kyung ";
+        String[] num = str.split(".");
+        String ret1 = num[0];
+        String ret2 = num[1];
     }
 }
 
