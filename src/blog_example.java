@@ -1,17 +1,18 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.Scanner;
+import java.util.Stack;
 
-public class blog_example {
-    public static void main(String[] args) {
-        String str = "Lee. Do kyung ";
-        String[] num = str.split(".");
-        String ret1 = num[0];
-        String ret2 = num[1];
+class Solution {
+    public int solution(String s) {
+        Stack<Character> stack = new Stack<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char current = s.charAt(i);
+// 스택맨위, 현재 비교해서 같으면 pop 아니면 push
+            if (!stack.isEmpty() && stack.peek() == current) {
+                stack.pop();
+            } else {
+                stack.push(current);
+            }
+        }
+        return stack.isEmpty() ? 1 : 0;
     }
 }
-
-
