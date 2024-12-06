@@ -9,12 +9,16 @@ public class BOJ_1094 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
-        int cnt = 0;
+        int cnt = Integer.bitCount(N); // N의 이진 표현에서 1의 개수를 바로 계산
+
+        System.out.println(cnt);
+        /*int cnt = 0;
         for (int i = 0; i < 7; i++) {
             if((N &(1<< i)) > 0) cnt ++;
             int z = N & (1<< i);
             System.out.println(z);
-        }
+        }*/
+
         /*
         int[] map = new int[]{1, 2, 4, 8, 16, 32, 64};
         int cnt = 0;
