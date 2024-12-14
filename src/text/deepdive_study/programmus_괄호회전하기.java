@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Programmus_괄호회전하기 {
+public class programmus_괄호회전하기 {
     static class Solution {
         public boolean solution(String s) {
             int cnt = 0;
