@@ -9,8 +9,35 @@ import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+public class BOJ_2075 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\dbzos\\OneDrive\\바탕 화면\\CodingTest\\src\\input.txt"));
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
 
+        int N = Integer.parseInt(br.readLine());
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
 
+        for (int i = 0; i < N; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int j = 0; j < N; j++) {
+                int num = Integer.parseInt(st.nextToken());
+
+                if (pq.size() < N) {
+                    pq.offer(num);
+                } else if (pq.peek() < num) {
+                    pq.poll();
+                    pq.offer(num);
+                }
+                System.out.println(pq);
+            }
+        }
+
+        System.out.println(pq.peek());
+    }
+}
+
+/*
 public class BOJ_2075 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\dbzos\\OneDrive\\바탕 화면\\CodingTest\\src\\input.txt"));
@@ -35,3 +62,4 @@ public class BOJ_2075 {
     }
 }
 
+*/
