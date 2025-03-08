@@ -30,3 +30,4 @@ public class BOJ_B3_18247 {
 
     }
 }
+
