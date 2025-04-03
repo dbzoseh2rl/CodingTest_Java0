@@ -1,20 +1,40 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
-import static java.lang.System.*;
+public class BOJ_1434{
+    public static void main(String[] args) {
+        int n,m,x=0, sum=0, box_sum=0;
+        Scanner scanner = new Scanner(System.in);
 
-public class BOJ_1434 {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        n = scanner.nextInt();
+        m = scanner.nextInt();
 
-        String A = br.readLine();
-        out.println("A = " + A);
-        String B = br.readLine();
-        out.println("B = " + B);
-        String C = br.readLine();
-        out.println("C = " + C);
+        int []box = new int [n];
+        int []book = new int [m];
+
+        for(int i=0;i<n;i++){
+            box[i] = scanner.nextInt();
+        }
+
+        for(int i=0;i<m;i++){
+            book[i] = scanner.nextInt();
+        }
+
+        for(int i=0;i<m;i++){
+            while(true){
+                if(box[x]<book[i]){
+                    x++;
+                }
+                else{
+                    box[x] -= book[i];
+                    break;
+                }
+            }
+        }
+
+        for(int i=0;i<n;i++){
+            sum += box[i];
+        }
+
+        System.out.println(sum);
     }
 }
