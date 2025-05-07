@@ -15,7 +15,7 @@ public class BOJ_23795 {
         System.out.println(sum);
     }
 
-    public static void main(String[] args) throws Exception {
-        new Main().solution();
-    }
+//    public static void main(String[] args) throws Exception {
+//        new Main().solution();
+//    }
 }
