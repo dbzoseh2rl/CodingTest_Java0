@@ -2,7 +2,7 @@ package text.bronze;
 
 import java.util.Scanner;
 
-public class BOJ_14803 {
+public class BOJ_14038 {
     public static void main(String[] args) {
         int count = 0;
         Scanner sc = new Scanner(System.in);
