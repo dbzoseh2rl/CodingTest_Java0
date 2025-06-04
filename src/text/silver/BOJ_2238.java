@@ -22,6 +22,8 @@ public class BOJ_2238 {
             String name = st2.nextToken();
             int cnt = Integer.parseInt(st2.nextToken());
 
+            System.out.println(name + " " + cnt);
+
             if (false) {
                 cntSet.remove(cnt);
                 hashMap.remove(cnt);
