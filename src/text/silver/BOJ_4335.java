@@ -27,7 +27,7 @@ public class BOJ_4335 {
                 if (a >= low && a <= high) {
                     System.out.println("Stan is honest");
                 } else {
-                    System.out.println("Stan is dishonest");
+                    System.out.println("Stan may be dishonest");
                 }
 
                 low = 1;
