@@ -35,4 +35,5 @@ public class BOJ_17618 {
             }
             System.out.println(total);
         }
+    }
 }
