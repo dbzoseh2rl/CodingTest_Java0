@@ -1,8 +1,7 @@
 package text.silver;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.util.ArrayList;
 
 public class BOJ_4335 {
     public static void main(String[] args) throws IOException {
@@ -25,9 +24,9 @@ public class BOJ_4335 {
             } else if (b.equals("right on")) {
                 // 정답 판정
                 if (a >= low && a <= high) {
-                    System.out.println("Stan is honest");
+                    System.out.println("Stan may be honest");
                 } else {
-                    System.out.println("Stan may be dishonest");
+                    System.out.println("Stan is dishonest");
                 }
 
                 low = 1;
@@ -37,3 +36,40 @@ public class BOJ_4335 {
     }
 
 }
+
+
+
+//
+//
+//public static void main(String[] args) throws IOException{
+//    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+//    BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));
+//    ArrayList<Integer> low=new ArrayList<>();
+//    ArrayList<Integer> high=new ArrayList<>();
+//    while(true){
+//        int n=Integer.parseInt(br.readLine());
+//        if(n==0){
+//            break;
+//        }
+//        String w=br.readLine();
+//        if(w.equals("too high")){
+//            high.add(n);
+//        }
+//        else if(w.equals("too low")){
+//            low.add(n);
+//        }
+//        else{
+//            boolean a=true;
+//            for(int i=0; i<low.size(); i++){
+//                a= n <= low.get(i) ? false : a;
+//            }
+//            for(int i=0; i<high.size(); i++){
+//                a= n >= high.get(i) ? false : a;
+//            }
+//            bw.write(a ? "Stan may be honest\n" : "Stan is dishonest\n");
+//            low.clear();
+//            high.clear();
+//        }
+//    }
+//    bw.flush();
+//}
